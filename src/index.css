@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* D3 Graph Styles */
+.node {
+  transition: opacity 0.2s ease;
+}
+
+.node:hover {
+  filter: brightness(1.1);
+}
+
+.graph-tooltip {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.4;
+}
+
+/* Custom scrollbar for side panel */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

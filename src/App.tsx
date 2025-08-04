@@ -6,6 +6,7 @@ import { ComponentDetails } from './components/ComponentDetails';
 import { SecurityOverview } from './components/SecurityOverview';
 import { LicenseOverview } from './components/LicenseOverview';
 import { DependencyGraph } from './components/DependencyGraph';
+import { InteractiveDependencyGraph } from './components/InteractiveDependencyGraph';
 import { SearchAndFilter } from './components/SearchAndFilter';
 import { StatCard } from './components/StatCard';
 
@@ -292,7 +293,7 @@ function App() {
         )}
 
         {activeTab === 'dependencies' && (
-          <DependencyGraph sbomData={sbomData} />
+          <InteractiveDependencyGraph sbomData={sbomData} />
         )}
 
         {activeTab === 'security' && (
