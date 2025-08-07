@@ -33,3 +33,35 @@
 .overflow-y-auto::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Enhanced graph animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.graph-tooltip {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.4;
+  max-width: 280px;
+}
+
+.context-menu {
+  font-family: system-ui, -apple-system, sans-serif;
+  min-width: 160px;
+}
+
+/* Smooth transitions for graph elements */
+.node {
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.node:hover {
+  filter: brightness(1.1);
+}
+
+/* Loading animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
