@@ -14,6 +14,9 @@
 .graph-tooltip {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.4;
+  max-width: 300px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Custom scrollbar for side panel */
@@ -49,6 +52,8 @@
 .context-menu {
   font-family: system-ui, -apple-system, sans-serif;
   min-width: 160px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
 }
 
 /* Smooth transitions for graph elements */
@@ -60,8 +65,66 @@
   filter: brightness(1.1);
 }
 
+/* Enhanced graph animations */
+.vulnerability-indicator {
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+.cluster-hull {
+  animation: cluster-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes cluster-glow {
+  from {
+    stroke-opacity: 0.3;
+  }
+  to {
+    stroke-opacity: 0.7;
+  }
+}
+
+/* Node selection effects */
+.node-group.selected {
+  filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.5));
+}
+
+/* Heatmap transitions */
+.node {
+  transition: fill 0.5s ease, stroke 0.3s ease;
+}
+
+/* Timeline animation */
+.timeline-marker {
+  animation: timeline-pulse 1s ease-in-out infinite;
+}
+
+@keyframes timeline-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
 /* Loading animation */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
